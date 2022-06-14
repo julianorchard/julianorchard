@@ -1,4 +1,4 @@
-<img src="/README.png" alt="Graphic showing text reading, 'Hey there, waving hand emoji, I'm Julian'" align="center" />
+<img src="/README-2.png" alt="Graphic showing text reading, 'Hey there, waving hand emoji, I'm Julian!'" align="center" />
 
 - 👦 My pronouns are `he / him / his`
 - 👔 I’m working at [Wessex Lifts](https://wessexlifts.co.uk)
