@@ -1,0 +1,21 @@
+---
+name: Update Credly Badges
+
+on:
+  schedule:
+    - cron: 0 0 1 * *
+  workflow_dispatch:
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    name: Update README with badges
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update README badges
+        uses: pemtajo/badge-readme@main
+        with:
+          CREDLY_USER: julianorchard
+          CREDLY_SORT: POPULAR
+          BADGE_SIZE: 80
