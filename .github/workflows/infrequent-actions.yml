@@ -16,6 +16,8 @@ jobs:
     name: Bump hidden README value
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
 
       - name: Replace last-updated tag
         run: |
