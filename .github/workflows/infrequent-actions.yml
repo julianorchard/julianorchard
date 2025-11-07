@@ -1,0 +1,29 @@
+---
+name: GHA Nudge
+
+on:
+  schedule:
+    # This workflow will cause commit activity every 2 months to keep the other
+    # cron running too!
+    - cron: 0 0 2 * *
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    name: Bump hidden README value
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Replace last-updated tag
+        run: |
+          sed -i "s/<!-- Last updated: .* -->/<!-- Last updated: $(date '+%Y-%m-%d') -->/" README.md
+
+      - name: Commit last-updated tag change
+        uses: EndBug/add-and-commit@a94899bca583c204427a224a7af87c02f9b325d5
+        with:
+          default_author: github_actions
+          add: .
+          message: 'docs: update README.md'

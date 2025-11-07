@@ -5,6 +5,7 @@ on:
   schedule:
     - cron: 0 0 1 * *
   workflow_dispatch:
+
 permissions:
   contents: write
 
@@ -14,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update README badges
-        uses: pemtajo/badge-readme@main
+        uses: pemtajo/badge-readme@ca8a01f1f2a35ed8bd451942c965a6229ca6c198
         with:
           CREDLY_USER: julianorchard
           CREDLY_SORT: POPULAR
